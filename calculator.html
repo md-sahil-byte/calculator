@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+
+<body>
+    <button class="recent"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M20.9844 10H17M20.9844 10V6M20.9844 10L17.6569 6.34315C14.5327 3.21895 9.46734 3.21895 6.34315 6.34315C3.21895 9.46734 3.21895 14.5327 6.34315 17.6569C9.46734 20.781 14.5327 20.781 17.6569 17.6569C18.4407 16.873 19.0279 15.9669 19.4184 15M12 9V13L15 14.5"
+                stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    </button>
+    <div class="calculator-container">
+
+        <input type="text" id="display" readonly>
+        <div class="calculator-input-button">
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="backspace()">⌫</button>
+            <button onclick="append('(')">(</button>
+            <button onclick="append(')')">)</button>
+            <button onclick="append('/')">÷</button>
+
+            <button onclick="append('7')">7</button>
+            <button onclick="append('8')">8</button>
+            <button onclick="append('9')">9</button>
+            <button onclick="append('*')">×</button>
+            <button onclick="append('^')">^</button>
+
+            <button onclick="append('4')">4</button>
+            <button onclick="append('5')">5</button>
+            <button onclick="append('6')">6</button>
+            <button onclick="append('-')">−</button>
+            <button onclick="append('sqrt(')">√</button>
+
+            <button onclick="append('1')">1</button>
+            <button onclick="append('2')">2</button>
+            <button onclick="append('3')">3</button>
+            <button onclick="append('+')">+</button>
+            <button onclick="append('log(')">log</button>
+
+            <button onclick="append('0')">0</button>
+            <button onclick="append('.')">.</button>
+            <button onclick="append('pi')">π</button>
+            <button onclick="append('e')">e</button>
+            <button onclick="calculate()" id="equals-to">=</button>
+        </div>
+    </div>
+    <div class="calculator-history">
+        <h2>History</h2>
+        <di class="calculator-history-content"></di>
+    </div>
+    <!-- close calculator -->
+    <button class="close">
+        <a href="/index.html"><svg width="72" height="72" viewBox="0 0 72 72" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g id="close">
+                    <path id="Icon" d="M18 18L54 54M54 18L18 54" stroke="black" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </g>
+            </svg></a>
+
+    </button>
+    <!-- java script of the calculator -->
+    <script src="calculator.js"></script>
+</body>
+
+</html>
